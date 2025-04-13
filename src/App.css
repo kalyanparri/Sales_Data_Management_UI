@@ -40,3 +40,10 @@
 .read-the-docs {
   color: #888;
 }
+
+#container-parent {
+  display: column;
+  min-height: 100vh;
+  flex-direction: row;
+  margin: 0;
+}

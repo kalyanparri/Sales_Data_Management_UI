@@ -1,0 +1,14 @@
+#fileInput{
+    display: none;
+}
+
+#file-upload{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#sales-history{
+    display: flex;
+    flex-direction: column;
+}

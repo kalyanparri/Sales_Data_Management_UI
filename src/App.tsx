@@ -1,17 +1,17 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from "react";
+import './App.css';
+import FileUpload from "./components/FileUpload";
+import SalesData from "./components/SalesData";
+import UploadHistory from "./components/UploadHistory";
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          Upload CSV File
-        </button>
+      <div id="container-parent">
+        <FileUpload/>
+        <SalesData/>
+        <UploadHistory/>
       </div>
     </>
   )
