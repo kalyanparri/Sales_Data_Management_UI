@@ -3,6 +3,8 @@ import './App.css';
 import FileUpload from "./components/FileUpload";
 import SalesData from "./components/SalesData";
 import UploadHistory from "./components/UploadHistory";
+import Customers from "./components/Customers";
+import Products from "./components/Products";
 
 function App() {
 
@@ -12,6 +14,8 @@ function App() {
         <FileUpload/>
         <UploadHistory/>
         <SalesData/>
+        <Customers/>
+        <Products/>
       </div>
     </>
   )

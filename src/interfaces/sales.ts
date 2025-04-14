@@ -10,6 +10,7 @@ export interface ISale {
     product: string,
     quantity: number,
     price: string,
+    total_sale: string,
     date: string
 }
 
@@ -22,4 +23,14 @@ export interface IUploadHistory {
     file_name: string,
     upload_date: string,
     processed_rows: number,
+}
+
+export interface IProducts {
+    product: string,
+    count: number,
+}
+
+export interface ICustomers {
+    customer: string,
+    amount_spent: string,
 }

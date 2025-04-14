@@ -5,7 +5,7 @@ import { GET_UPLOAD_HISTORY } from "../utils/constants";
 import { DataTable } from 'primereact/datatable';
 import { Column } from 'primereact/column';
 import 'primeicons/primeicons.css';
-import "primereact/resources/themes/bootstrap4-light-blue/theme.css";
+import "primereact/resources/themes/lara-light-blue/theme.css";
 
 const UploadHistory = () =>{
 

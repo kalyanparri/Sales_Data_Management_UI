@@ -3,7 +3,7 @@ import './style.css';
 import { useDispatch, useSelector } from "react-redux";
 import { UPLOAD_SALES } from "../utils/constants";
 import 'primeicons/primeicons.css';
-import "primereact/resources/themes/bootstrap4-light-blue/theme.css";
+import "primereact/resources/themes/lara-light-blue/theme.css";
 
 const FileUpload = () =>{
 

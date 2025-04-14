@@ -5,7 +5,7 @@ import { GET_SALES } from "../utils/constants";
 import { DataTable } from 'primereact/datatable';
 import { Column } from 'primereact/column';
 import 'primeicons/primeicons.css';
-import "primereact/resources/themes/bootstrap4-light-blue/theme.css";
+import "primereact/resources/themes/lara-light-blue/theme.css";
 
 const SalesData = () =>{
 
@@ -27,6 +27,7 @@ const SalesData = () =>{
                 <Column header="Product" field="product" sortable  style={headerStyle} filter filterPlaceholder="Search" />
                 <Column header="Quantity"  field="quantity" sortable  style={headerStyle} filter filterPlaceholder="Search"  />
                 <Column header="Price"  field="price" sortable style={headerStyle} filter filterPlaceholder="Search"  />
+                <Column header="Total Sale"  field="total_sale" sortable style={headerStyle} filter filterPlaceholder="Search"  />
                 <Column header="Date"  field="date" sortable  style={headerStyle}  filter filterPlaceholder="Search"  />
             </DataTable>
         </div>
