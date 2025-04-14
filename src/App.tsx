@@ -10,8 +10,8 @@ function App() {
     <>
       <div id="container-parent">
         <FileUpload/>
-        <SalesData/>
         <UploadHistory/>
+        <SalesData/>
       </div>
     </>
   )

@@ -12,3 +12,12 @@
     display: flex;
     flex-direction: column;
 }
+
+#message{
+    padding: 15px;
+    color: green;
+}
+
+#upload{
+    font-size: 12px;
+}

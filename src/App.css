@@ -42,8 +42,8 @@
 }
 
 #container-parent {
-  display: column;
+  display: flex;
   min-height: 100vh;
-  flex-direction: row;
-  margin: 0;
+  flex-direction: column;
+  gap: 12px;
 }

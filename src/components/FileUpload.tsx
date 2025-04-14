@@ -3,6 +3,9 @@ import './style.css';
 import { useDispatch, useSelector } from "react-redux";
 import { UPLOAD_SALES } from "../utils/constants";
 import { updateMessage } from "../redux/sales/salesSlice";
+import { Button } from 'primereact/button';
+import 'primeicons/primeicons.css';
+import "primereact/resources/themes/bootstrap4-light-blue/theme.css";
 
 const FileUpload = () =>{
 
@@ -26,11 +29,11 @@ const FileUpload = () =>{
         <div id="file-upload">
             <div onChange={handleChangeFile}>
                 <input ref={inputFileRef} type="file" id="fileInput" accept=".csv"></input>
-                <button onClick={() => inputFileRef?.current?.click()}>
-                    Upload CSV File
+                <button id='upload' onClick={() => inputFileRef?.current?.click()}>
+                  Upload CSV File
                 </button>
             </div>
-            <div>
+            <div id='message'>
               {message}
             </div>
         </div>
