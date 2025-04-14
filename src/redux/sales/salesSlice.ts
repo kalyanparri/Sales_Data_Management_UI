@@ -1,11 +1,11 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { IUploadResponse } from "../../interfaces/sales";
-import { message } from "../../utils/constants";
+import { default_message } from "../../utils/constants";
 
 const initialState: IUploadResponse = {
     data: [],
     loading: false,
-    message: message
+    message: default_message
 }
 
 const salesSlice = createSlice({

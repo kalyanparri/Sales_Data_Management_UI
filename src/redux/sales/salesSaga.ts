@@ -1,5 +1,5 @@
-import { takeLatest, call, put } from "redux-saga/effects";
-import { GET_SALES, UPLOAD_SALES } from "../../utils/constants";
+import { takeLatest, call, put, delay } from "redux-saga/effects";
+import { default_message, GET_SALES, GET_UPLOAD_HISTORY, UPLOAD_SALES } from "../../utils/constants";
 import { apiHandler } from "../../api/apiHandler";
 import { AxiosResponse } from "axios";
 import { saveSales, updateUploadResponse } from "./salesSlice";
@@ -16,6 +16,10 @@ function* uploadSales(action: any){
         console.log('response', respose);
         const message = `${respose.data.message} and ${respose.data.rows_inserted} records inserted`
         yield put(updateUploadResponse(message));
+        yield put({type: GET_SALES});
+        yield put({type: GET_UPLOAD_HISTORY});
+        yield delay(5000); 
+        yield put(updateUploadResponse(default_message));
     } catch (error) {
         console.log(error)
     }

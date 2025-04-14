@@ -1,9 +1,7 @@
-import React, { useEffect, useRef } from "react";
+import React, { useRef } from "react";
 import './style.css';
 import { useDispatch, useSelector } from "react-redux";
 import { UPLOAD_SALES } from "../utils/constants";
-import { updateMessage } from "../redux/sales/salesSlice";
-import { Button } from 'primereact/button';
 import 'primeicons/primeicons.css';
 import "primereact/resources/themes/bootstrap4-light-blue/theme.css";
 
@@ -18,12 +16,6 @@ const FileUpload = () =>{
         formData.append('file', file);
         dispatch({type: UPLOAD_SALES, payload: formData});
     }
-
-    useEffect(()=>{
-      setTimeout(()=>{
-        dispatch(updateMessage(message));
-      },2000)
-    }, [message])
 
     return(
         <div id="file-upload">
