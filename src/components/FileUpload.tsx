@@ -15,6 +15,7 @@ const FileUpload = () =>{
         let formData = new FormData();
         formData.append('file', file);
         dispatch({type: UPLOAD_SALES, payload: formData});
+        event.target.value = null;
     }
 
     return(
