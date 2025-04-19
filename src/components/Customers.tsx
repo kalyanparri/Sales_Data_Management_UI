@@ -19,12 +19,13 @@ const Customers = () =>{
     },[data])
 
     return(
-        <div id="sales-history">
-            <DataTable paginator showGridlines rows={5} loading={loading} value={customers} tableStyle={{ minWidth: '50rem' }} 
+        <div className="child-container">
+            { customers?.length > 0 && <DataTable paginator showGridlines rows={5} loading={loading} value={customers} tableStyle={{ minWidth: '50rem' }} 
                 header={'Customers Data'} filterDisplay="row" size="small">
                 <Column field="customer" header="Customer Name" filter filterPlaceholder="Search by name" style={{ minWidth: '12rem' }}></Column>
                 <Column field="amount_spent" header="Amount Spent"></Column>
             </DataTable>
+            }
         </div>
     )
 }

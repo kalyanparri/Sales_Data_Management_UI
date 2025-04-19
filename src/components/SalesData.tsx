@@ -20,8 +20,8 @@ const SalesData = () =>{
     const headerStyle = { minWidth: '14rem' };
 
     return(
-        <div id="sales-history">
-            <DataTable value={data} paginator rows={5} loading={loading} filterDisplay="row" showGridlines  header={'Sales Transactions'}>
+        <div className="child-container">
+            { data?.length > 0 && <DataTable value={data} paginator rows={5} loading={loading} filterDisplay="row" showGridlines  header={'Sales Transactions'}>
                 <Column header="Transaction Id" field="transaction_id" sortable  style={headerStyle} filter filterPlaceholder="Search" />
                 <Column header="Customer Name" field="customer_name" sortable  style={headerStyle} filter filterPlaceholder="Search" />
                 <Column header="Product" field="product" sortable  style={headerStyle} filter filterPlaceholder="Search" />
@@ -30,6 +30,7 @@ const SalesData = () =>{
                 <Column header="Total Sale"  field="total_sale" sortable style={headerStyle} filter filterPlaceholder="Search"  />
                 <Column header="Date"  field="date" sortable  style={headerStyle}  filter filterPlaceholder="Search"  />
             </DataTable>
+            }
         </div>
     )
 }
