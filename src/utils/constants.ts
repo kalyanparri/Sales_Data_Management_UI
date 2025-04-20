@@ -1,3 +1,4 @@
+export const BASE_URL = 'http://localhost:4000/';
 export const UPLOAD_SALES = 'UPLOAD_SALES';
 export const GET_SALES = 'GET_SALES';
 export const GET_UPLOAD_HISTORY = 'GET_UPLOAD_HISTORY';

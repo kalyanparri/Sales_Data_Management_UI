@@ -1,10 +1,11 @@
 import axios from "axios";
+import { BASE_URL } from "../utils/constants";
 
 export const apiHandler = (params: any) =>{
-    const { method, data, url, headers} = params;
+    const { method, data, endpoint, headers} = params;
     return axios({
         method,
-        url,
+        url: `${BASE_URL}${endpoint}`,
         data,
         headers: headers || {
             'Content-Type': 'application/json'

@@ -5,7 +5,7 @@ import { AxiosResponse } from "axios";
 import { saveUploadHistory } from "./uploadHistorySlice";
 
 function* fetchUploadHistory(){
-    const params = { url: 'http://localhost:3000/upload-history/', method: 'GET'}
+    const params = { endpoint: 'upload-history/', method: 'GET'}
     try {
         const respose: AxiosResponse = yield call(apiHandler, params);
         console.log('upload history data:', respose);

@@ -10,7 +10,7 @@ function* uploadSales(action: any){
     const headers = {
         "Content-Type": "multipart/form-data"
     }
-    const params = { url: 'http://localhost:3000/sales/', method: 'POST', headers, data: file}
+    const params = { endpoint: 'sales/', method: 'POST', headers, data: file}
     try {
         const respose: AxiosResponse = yield call(apiHandler, params);
         let message;
@@ -32,7 +32,7 @@ function* uploadSales(action: any){
 }
 
 function* fetchSales(){
-    const params = { url: 'http://localhost:3000/sales/', method: 'GET'}
+    const params = { endpoint: 'sales/', method: 'GET'}
     try {
         const respose: AxiosResponse = yield call(apiHandler, params);
         console.log('sales data:', respose);
